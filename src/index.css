@@ -1,10 +1,15 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: Helvetica, sans-serif;
+}
+
+html, body, #root {
+  height: 100%;
 }
 
 .App {
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,6 +18,38 @@ body {
 }
 
 .counter {
-  font-size: 2rem;
+  font-size: 40px;
   text-align: center;
+  margin-bottom: 20px;
+  color: #2d2d2d;
+}
+
+.wrapButtons{ 
+  width: 105px;
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  width: 50px;
+  height: 30px;
+  border-radius: 2px;
+  border: 1px solid gray;
+  box-shadow: -1px 1px 0px -1px rgba(0, 0, 0, 0.2), 
+              0px 4px 5px 0px rgba(0, 0, 0, 0.14), 
+              0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.content {
+  padding: 60px;
+  background: #cad6ff;
+  border: 1px solid rgba(0, 0, 0, 0.23);
+  border-radius: 2px;
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 
+              0px 4px 5px 0px rgba(0, 0, 0, 0.14), 
+              0px 1px 10px 0px rgba(0, 0, 0, 0.12);
 }

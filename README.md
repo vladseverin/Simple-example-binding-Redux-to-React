@@ -6,4 +6,5 @@ In the example, a simple counter is used that takes a global state from the Redu
 ### How to Start
 - Clone or download [repository](https://github.com/vladseverin/Simple-example-binding-Redux-to-React.git)  
 - Go to the project directory
+- Use command in command line **npm install** or **yarn install**
 - Use command in command line **npm start** or **yarn start**

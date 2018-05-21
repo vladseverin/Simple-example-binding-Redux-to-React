@@ -17,12 +17,14 @@ export default class App extends Component {
     const { value } = this.props;
     return (
       <div className="App">
-        <div className="counter">
-          { value }
-        </div>
-        <div>
-          <button className="button" onClick={this.handleCounter}>+</button>
-          <button className="button" onClick={this.handleSubtractCounter}>-</button>
+        <div className="content">
+          <div className="counter">
+            {value}
+          </div>
+          <div className="wrapButtons">
+            <button className="button" onClick={this.handleCounter}>+</button>
+            <button className="button" onClick={this.handleSubtractCounter}>-</button>
+          </div>
         </div>
       </div>
     );
