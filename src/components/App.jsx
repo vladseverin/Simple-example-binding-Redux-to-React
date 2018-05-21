@@ -1,16 +1,12 @@
 import React, { Component } from 'react';
 
 export default class App extends Component {
-  handleCounter = () => {
-    this.setState({
-      value: this.props.increment()
-    });
-  }
 
-  handleSubtractCounter = () => {
-    this.setState({
-      value: this.props.decrement()
-    });
+  handleChange = (event) => {
+    event.persist();
+    const { name } = event.target;
+    
+    this.props[name](); // name equally increment or decrement
   }
 
   render() {
@@ -22,8 +18,8 @@ export default class App extends Component {
             {value}
           </div>
           <div className="wrapButtons">
-            <button className="button" onClick={this.handleCounter}>+</button>
-            <button className="button" onClick={this.handleSubtractCounter}>-</button>
+            <button className="button" name='increment' onClick={this.handleChange}>+</button>
+            <button className="button" name='decrement' onClick={this.handleChange}>-</button>
           </div>
         </div>
       </div>
