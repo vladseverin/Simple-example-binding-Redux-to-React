@@ -1,12 +1,17 @@
 import { createStore } from 'redux';
 import counter from '../reducers/index';
 import { increment, decrement } from '../actions/index';
+import { loadState, saveState } from '../utils/localStorage';
 
-export const store = createStore(counter);
+const persistState = loadState();
 
-store.subscribe(() =>
-  console.log(store.getState())
-)
+export const store = createStore(counter, persistState);
+
+store.subscribe(() => {
+  const getState = store.getState();
+  saveState(getState);
+  console.log(getState);
+});
 
 window.store = store;
 window.increment = increment;
